@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agroturismo Paraná - Descubra nossa terra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <div class="container header-flex">
+            <div class="logo">Agro<span>Turismo</span> PR</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#sobre">O Setor</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>A Força da Terra, a Beleza do Turismo</h1>
+            <p>Conheça as rotas do café, as colônias holandesas, a produção de vinhos e a potência do agronegócio paranaense.</p>
+            <a href="#destinos" class="btn">Explorar Rotas</a>
+        </div>
+    </section>
+
+    <section id="destinos" class="container section">
+        <h2 class="section-title">Rotas Turísticas do Agro</h2>
+        <div class="grid-destinos">
+            
+            <div class="card" data-regiao="Norte">
+                <div class="card-img card-cafe"></div>
+                <div class="card-body">
+                    <h3>Rota do Café (Norte)</h3>
+                    <p>Reviva a história do "ouro verde". Visite fazendas históricas, entenda o processo de produção e deguste cafés especiais premiados mundialmente.</p>
+                    <button class="btn-card" onclick="abrirModal('Rota do Café', 'O Norte do Paraná guarda a memória afetiva e histórica do café. O roteiro inclui cafeterias coloniais, passeios por cafezais e a chance de colher o próprio grão em fazendas centenárias.')">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="card" data-regiao="Campos Gerais">
+                <div class="card-img card-holandesa"></div>
+                <div class="card-body">
+                    <h3>Colônias Holandesas (Campos Gerais)</h3>
+                    <p>Castrolanda e Carambeí unem a alta tecnologia da produção leiteira com cooperativas exemplares, moinhos de vento e tortas famosas.</p>
+                    <button class="btn-card" onclick="abrirModal('Colônias Holandesas', 'Referência nacional em produtividade leiteira, a região dos Campos Gerais mistura o agronegócio de ponta com o charme das tradições, museus e gastronomia europeia.')">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="card" data-regiao="Oeste">
+                <div class="card-img card-tecnologia"></div>
+                <div class="card-body">
+                    <h3>Oeste Tecnológico & Cooperativas</h3>
+                    <p>O coração do agro de grãos e proteína animal. Cascavel e Toledo mostram o gigantismo das feiras tecnológicas e o turismo de negócios.</p>
+                    <button class="btn-card" onclick="abrirModal('Oeste Tecnológico', 'Berço de grandes feiras como o Show Rural Coopavel, a região Oeste atrai turistas do mundo todo interessados em inovação, maquinário agrícola e sustentabilidade no campo.')">Saiba Mais</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharModal()">&times;</span>
+            <h3 id="modal-titulo">Título</h3>
+            <p id="modal-texto">Texto explicativo aqui...</p>
+        </div>
+    </div>
+
+    <section id="sobre" class="bg-light section">
+        <div class="container grid-sobre">
+            <div>
+                <h2>O Paraná no Topo do Agro Nacional</h2>
+                <p>O Paraná é um dos maiores produtores de grãos, aves e alimentos do Brasil. Mas além dos recordes de colheita, o estado transforma suas propriedades rurais em experiências inesquecíveis.</p>
+                <p>O agroturismo gera renda para a agricultura familiar, preserva tradições de imigrantes (italianos, alemães, holandeses, poloneses, ucranianos) e conecta a cidade com a vida no campo.</p>
+            </div>
+            <div class="stats-box">
+                <div class="stat-item">
+                    <h4>2º Maior</h4>
+                    <p>Produtor de grãos do Brasil</p>
+                </div>
+                <div class="stat-item">
+                    <h4>Líder</h4>
+                    <p>Em sustentabilidade agrícola</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="container section">
+        <h2 class="section-title">Planeje sua Viagem</h2>
+        <form id="form-contato" class="form-style">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mensagem">Qual rota você deseja conhecer?</label>
+                <textarea id="mensagem" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Enviar Interesse</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Agroturismo Paraná. Orgulho da nossa terra, riqueza do nosso povo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
